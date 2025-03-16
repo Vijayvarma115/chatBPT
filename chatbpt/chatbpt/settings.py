@@ -80,19 +80,19 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ChatBPT',
         'USER': 'chatbpt_user',
-        'PASSWORD': 'chatbpt_user',
+        'PASSWORD': 'chatbpt',
         'HOST': 'localhost',
         'PORT': '5432',
     }
 }
 
 # MongoDB settings
-MONGODB_SETTINGS = {
-    'db': 'ChatBPT',
-    'host': 'mongodb+srv://chatbpt_user:chatbpt_user@cluster0.7ikmy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+MONGODB_SETTINGS={
+    'db':'Chatbpt',
+    'host':'mongodb+srv://chatbpt_user:chatbpt@cluster0.vfhtz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
 }
 
-MONGO_URI = 'mongodb+srv://chatbpt_user:chatbpt_user@cluster0.7ikmy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+MONGO_URI = 'mongodb+srv://chatbpt_user:chatbpt@cluster0.vfhtz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 
 # Redis configuration
 CACHES = {
