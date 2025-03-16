@@ -1,0 +1,52 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.chat-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.chat-history {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.chat-message {
+    background-color: #fff;
+}
+
+.timestamp {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.jumbotron {
+    background-color: #e9ecef;
+    padding: 2rem 1rem;
+}
+
+.sidebar {
+    background-color: #f8f9fa;
+    padding: 15px;
+}
+
+.sidebar .list-group-item {
+    cursor: pointer;
+}
+
+.sidebar .list-group-item:hover {
+    background-color: #e9ecef;
+}
+
+.main-content {
+    flex-grow: 1;
+    overflow-y: auto;
+}

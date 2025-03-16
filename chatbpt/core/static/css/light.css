@@ -1,0 +1,23 @@
+body {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+.navbar {
+    background-color: #e9ecef;
+}
+
+.jumbotron {
+    background-color: #e9ecef;
+    color: #212529;
+}
+
+.chat-container {
+    background-color: #ffffff;
+    color: #212529;
+}
+
+.chat-message {
+    background-color: #f8f9fa;
+    color: #212529;
+}

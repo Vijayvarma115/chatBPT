@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Preferences{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">User Preferences</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="theme">Preferred Theme</label>
+            <select class="form-control" id="theme" name="theme">
+                <option value="light" {% if preferences.theme == 'light' %}selected{% endif %}>Light</option>
+                <option value="dark" {% if preferences.theme == 'dark' %}selected{% endif %}>Dark</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Save Preferences</button>
+    </form>
+</div>
+{% endblock %}

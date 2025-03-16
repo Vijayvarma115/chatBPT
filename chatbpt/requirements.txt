@@ -1,0 +1,6 @@
+django
+groq
+pymongo
+django-redis
+psycopg2-binary
+markdown2

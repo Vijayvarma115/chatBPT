@@ -1,0 +1,12 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+    <h1>Welcome to ChatBPT!</h1>
+    <p class="lead">Your AI-powered chat assistant.</p>
+    <a href="{% url 'register' %}" class="btn btn-primary btn-lg my-2">Register</a>
+    <a href="{% url 'login' %}" class="btn btn-secondary btn-lg my-2">Login</a>
+</div>
+{% endblock %}

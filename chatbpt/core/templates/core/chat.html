@@ -1,0 +1,47 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Chat{% endblock %}
+
+{% block content %}
+<div class="d-flex">
+    <div class="sidebar border-right" style="width: 250px; height: 100vh; overflow-y: auto;">
+        <h3 class="my-4">Chat History</h3>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <a href="{% url 'chat' %}?new_chat=true">New Chat</a>
+            </li>
+            {% for date, chats in chat_groups %}
+                <li class="list-group-item active">{{ date|date:"Y-m-d" }}</li>
+                {% for chat in chats %}
+                    <li class="list-group-item">
+                        <a href="{% url 'chat' %}?chat_id={{ chat.id }}">{{ chat.name }}</a>
+                    </li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="main-content flex-grow-1 p-4">
+        <h1 class="my-4">Chat</h1>
+        <div class="chat-history mb-4">
+            {% for message in current_chat %}
+                <div class="chat-message mb-2 p-2 border rounded">
+                    <strong>{{ message.user_id }}:</strong>
+                    <div class="message-content">{{ message.message|safe }}</div>
+                    <span class="text-muted float-right">{{ message.timestamp }}</span>
+                </div>
+            {% endfor %}
+        </div>
+        <form method="POST" class="form-group">
+            {% csrf_token %}
+            <textarea name="message" class="form-control mb-2" placeholder="Type your message here..." rows="3"></textarea>
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var chatHistoryDiv = document.querySelector('.chat-history');
+    chatHistoryDiv.scrollTop = chatHistoryDiv.scrollHeight;
+});
+</script>
+{% endblock %}

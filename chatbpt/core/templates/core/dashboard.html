@@ -1,0 +1,12 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Welcome, {{ user.username }}!</h1>
+    <p class="lead">This is your dashboard where you can manage your preferences and start chatting.</p>
+    <hr class="my-4">
+    <a class="btn btn-primary btn-lg" href="{% url 'chat' %}" role="button">Go to Chat</a>
+</div>
+{% endblock %}
